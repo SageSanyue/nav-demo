@@ -47,9 +47,9 @@
                 var key = btn['id']     //qwertyuiop
                 var x = prompt('Give me a website')    //insert "baidu.com"
                 hash[key] = x      //hash变更
-                img2.src = 'http://' + x + '/favicon.ico'
+                img2.src = 'https://' + x + '/favicon.ico'
                 img2.onerror = function(e){
-                    e.target.src = ''
+                    e.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
                 }
                 localStorage.setItem('z',JSON.stringify(hash))
             }
@@ -58,12 +58,12 @@
         function createImage(domain){
             var img = tag('img')
             if(domain){
-                img.src = 'http://' + domain + '/favicon.ico'
+                img.src = 'https://' + domain + '/favicon.ico'
             }else{
-                img.src = ''
+                img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
             }
             img.onerror = function(x){
-                x.target.src = ''
+                x.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
             }
             return img
         }
@@ -107,7 +107,7 @@
             document.onkeypress = function(tab){
                 var key = tab['key'] //q w e
                 var website = hash[key]
-                window.open('http://'+website,'_blank')
+                window.open('https://'+website,'_blank')
             }
         }
     </script>
