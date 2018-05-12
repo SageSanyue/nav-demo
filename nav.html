@@ -47,7 +47,7 @@
                 var key = btn['id']     //qwertyuiop
                 var x = prompt('Give me a website')    //insert "baidu.com"
                 hash[key] = x      //hash变更
-                img2.src = 'https://' + x + '/favicon.ico'
+                img2.src = 'http://' + x + '/favicon.ico'
                 img2.onerror = function(e){
                     e.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
                 }
@@ -58,7 +58,7 @@
         function createImage(domain){
             var img = tag('img')
             if(domain){
-                img.src = 'https://' + domain + '/favicon.ico'
+                img.src = 'http://' + domain + '/favicon.ico'
             }else{
                 img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
             }
